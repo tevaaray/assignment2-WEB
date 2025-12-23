@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Random User Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      border-radius: 15px;
+      border: none;
+      background-color: #1a73e8;
+      color: white;
+    }
+
+    #user {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .user-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 550px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .user-card img {
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .news-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .news-article {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      align-items: center;
+      text-align: center;
+      height: 350px;
+      justify-content: space-between;
+    }
+
+    .news-article img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .news-article h4 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+
+    .news-article p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      line-height: 1.3;
+      overflow: hidden;
+    }
+
+    .news-article a {
+      text-decoration: none;
+      color: #1a73e8;
+      font-weight: bold;
+    }
+
+    h3 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+   
+    @media (max-width: 900px) {
+      #user {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .user-card {
+        width: 80%;
+        order: 1; 
+        margin-bottom: 20px;
+      }
+
+      .news-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        order: 2; 
+      }
+
+      .news-article {
+        width: 45%; 
+        margin: 5px;
+      }
+    }
+
+   
+    @media (max-width: 600px) {
+      .news-article {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Let's meet a new user!</h1>
+  <button id="btn">Get Random User</button>
+  <div id="user"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
